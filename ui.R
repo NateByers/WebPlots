@@ -17,10 +17,10 @@ shinyUI(pageWithSidebar(
   mainPanel(
     
     tabsetPanel(
-      tabPanel("Time: Morris", showOutput("timeMorris", "morris")),
-      tabPanel("Time: High", showOutput("timeHigh", "Highcharts")),
-      tabPanel("Time: NVD3", showOutput("timeNvd3", "nvd3")),
-      tabPanel("Box: High", showOutput("boxHigh", "Highcharts"))
+      tabPanel("Time Series: Morris", showOutput("timeMorris", "morris")),
+      tabPanel("Time Series: Highcharts", showOutput("timeHigh", "Highcharts")),
+      tabPanel("Time Series: NVD3", showOutput("timeNvd3", "nvd3")),
+      tabPanel("Box Plot: Highcharts", showOutput("boxHigh", "Highcharts"))
       
           
   )
