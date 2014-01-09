@@ -89,6 +89,25 @@ shinyServer(function(input, output, session, clientData) {
     return(n1)  
     })
   
+  # Time series plot using the Rickshaw library from rCharts
+  output$timeRickshaw <- renderChart({
+    new.date <- as.double(as.POSIXct(dbq.sub[, "sample.date"], origin="1970-01-01"))
+    print(new.date[1])
+    new.dbq.sub <- data.frame(new.date, dbq.sub)
+    print(colnames(new.dbq.sub))
+    r1 <- Rickshaw$new()
+    r1$layer(
+      concentration ~ new.date,
+      data = new.dbq.sub,
+      groups = "compound.name",
+      type = "line"
+    )
+    r1$set( 
+      slider = TRUE, legend = T
+    )
+    return(r1)
+  })
+  
   # Box plot using the Highcharts library from rCharts
   output$boxHigh <- renderChart({
     

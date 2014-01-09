@@ -20,8 +20,8 @@ shinyUI(pageWithSidebar(
       tabPanel("Time Series: Morris", showOutput("timeMorris", "morris")),
       tabPanel("Time Series: Highcharts", showOutput("timeHigh", "Highcharts")),
       tabPanel("Time Series: NVD3", showOutput("timeNvd3", "nvd3")),
+      tabPanel("Time Series: Rickshaw", showOutput("timeRickshaw", "rickshaw")),
       tabPanel("Box Plot: Highcharts", showOutput("boxHigh", "Highcharts"))
-      
           
   )
 )))
