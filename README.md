@@ -8,6 +8,13 @@ require(devtools)
 install_github('rCharts', 'ramnathv')
 ```
 
+The app can be run from your desktop using the `runGitHub()` function from the Shiny package
+
+```
+require(shiny)
+runGitHub('WebPlots', 'NateByers')
+```
+
 Time Series: Morris
 -------------------------------------------------------
 
