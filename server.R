@@ -1,5 +1,5 @@
 library(shiny)
-if(!require(reshape2)){install.package("reshape2")}
+if(!require(reshape2)){install.packages("reshape2")}
 library(reshape2)
 library(rCharts)
 
